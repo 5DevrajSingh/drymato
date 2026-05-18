@@ -35,7 +35,7 @@ function Navbar() {
        
       }`}
     >
-      {/* <div className="w-full max-w-7xl mx-auto px-6 sm:px-4 overflow-hidden"> */}
+     
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 py-5 overflow-hidden">
         {/* Desktop Navbar */}
         <div className="hidden lg:flex items-center justify-between">
@@ -130,9 +130,9 @@ function Navbar() {
               href="https://wa.me/919999999999"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#24a052] p-2 rounded-full flex items-center justify-center text-white"
+              className="bg-[#24a052]   p-2 rounded-full flex items-center justify-center text-white"
             >
-              <FaWhatsapp size={18} />
+              <FaWhatsapp size={22} />
             </a>
           </div>
         </div>
