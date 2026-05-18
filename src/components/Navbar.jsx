@@ -119,7 +119,7 @@ function Navbar() {
           {/* Center Logo */}
           <img
             onClick={() => navigate(`/`)}
-            src="/logo2.png"
+             src={logo}
             alt="Logo"
             className="h-10 w-auto cursor-pointer"
           />
