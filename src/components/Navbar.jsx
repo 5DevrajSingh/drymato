@@ -140,7 +140,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-gray-800 text-white px-6 pb-5">
+        <div className="lg:hidden bg-gray-800 text-white px-6 pb-5">
           <ul className="flex flex-col gap-4 font-semibold">
             <li>
               <Link to="/" onClick={() => setMenuOpen(false)}>
