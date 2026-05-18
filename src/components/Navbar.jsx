@@ -26,12 +26,13 @@ function Navbar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isHomePage
           ? scrolled
-          ? "bg-white/20 border-b border-white/20 shadow-lg text-white backdrop-blur-md"
-: "bg-transparent text-white"
-: "bg-white/10 shadow-md text-white backdrop-blur-md"
-        //   ? "bg-black/30 backdrop-blur-md shadow-md text-white"
-        //   : "bg-transparent text-white"
-        // : "bg-black/30 backdrop-blur-md shadow-md text-white"
+          ? "bg-black/40 border-b border-white/10 shadow-lg text-white"
+           : "bg-transparent text-white"
+            : "bg-black/30 shadow-md text-white"
+          //   ? "bg-black/20 border-b border-white/20 shadow-lg text-white backdrop-blur-md"
+          //   : "bg-transparent text-white"
+          // : "bg-black/10 shadow-md text-white backdrop-blur-md"
+       
       }`}
     >
       {/* <div className="w-full max-w-7xl mx-auto px-6 sm:px-4 overflow-hidden"> */}
