@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import logo from '../assets/drymato/transparentlogo.png'
-
+import logo from "../assets/drymato/transparentlogo.png";
 
 function Navbar() {
   const location = useLocation();
@@ -24,21 +23,21 @@ function Navbar() {
   }, []);
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isHomePage
-        ? scrolled
-          ? "bg-black/40  border-b border-white/10 shadow-lg text-white"
-          : "bg-transparent text-white"
-        : "bg-black/30 shadow-md text-white"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isHomePage
+          ? scrolled
+          ? "bg-white/20 border-b border-white/20 shadow-lg text-white backdrop-blur-md"
+: "bg-transparent text-white"
+: "bg-white/10 shadow-md text-white backdrop-blur-md"
         //   ? "bg-black/30 backdrop-blur-md shadow-md text-white"
         //   : "bg-transparent text-white"
         // : "bg-black/30 backdrop-blur-md shadow-md text-white"
-        }`}
+      }`}
     >
-      <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 overflow-hidden">
-
+      {/* <div className="w-full max-w-7xl mx-auto px-6 sm:px-4 overflow-hidden"> */}
+      <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 py-5 overflow-hidden">
         {/* Desktop Navbar */}
-        <div className="hidden md:flex items-center justify-between">
-
+        <div className="hidden lg:flex items-center justify-between">
           {/* Logo */}
           <img
             onClick={() => navigate(`/`)}
@@ -49,7 +48,6 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="flex gap-6 font-semibold">
-
             <li>
               <Link to="/" className="hover:text-black">
                 Home
@@ -83,7 +81,6 @@ function Navbar() {
 
           {/* Desktop Buttons */}
           <div className="flex items-center gap-4">
-
             <Link
               to="/contact-us"
               className="border border-white px-6 py-3 flex items-center gap-2 text-white uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300"
@@ -101,66 +98,54 @@ function Navbar() {
               <FaWhatsapp size={20} />
               <span className="hidden lg:block">WhatsApp</span>
             </a>
-
           </div>
         </div>
 
         {/* Mobile Navbar */}
         <div className="flex lg:hidden items-center justify-between w-full">
-
           {/* Left Burger */}
-          <button
-            className="text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
+          <button className="text-white" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={30} /> : <Menu size={30} />}
           </button>
 
           {/* Center Logo */}
           <img
             onClick={() => navigate(`/`)}
-             src={logo}
+            src={logo}
             alt="Logo"
             className="h-10 w-auto cursor-pointer"
           />
 
           {/* Right Icons */}
           <div className="flex items-center gap-2">
-
             <Link
               to="/contact-us"
-              className="border border-white px-6 py-3 flex items-center gap-2 text-white uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300"
+              className="border border-white p-2 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
             >
               <Phone size={18} />
-              <span className="hidden lg:block">Contact Us</span>
             </Link>
 
             <a
               href="https://wa.me/919999999999"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#24a052] p-2 text-white"
+              className="bg-[#24a052] p-2 rounded-full flex items-center justify-center text-white"
             >
               <FaWhatsapp size={18} />
             </a>
-
           </div>
         </div>
-
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-gray-800 text-white px-6 pb-5">
           <ul className="flex flex-col gap-4 font-semibold">
-
             <li>
               <Link to="/" onClick={() => setMenuOpen(false)}>
                 Home
               </Link>
             </li>
-
-
 
             <li>
               <Link to="/product" onClick={() => setMenuOpen(false)}>
@@ -180,14 +165,11 @@ function Navbar() {
               </Link>
             </li>
 
-
             <li>
               <Link to="/our-story" onClick={() => setMenuOpen(false)}>
                 Our Story
               </Link>
             </li>
-
-
           </ul>
         </div>
       )}
