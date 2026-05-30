@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import daymatoVideo from "../assets/drymato/IMG_6290.MP4";
+import profileImage from "../assets/dev.png";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,6 +30,24 @@ function Hero() {
             type="video/mp4"
           />
         </video>
+
+        {/* Portfolio Image */}
+        <div
+          // className="absolute bottom-24 right-5 md:right-40 z-10"
+          className="absolute bottom-10 right-5 md:right-16 lg:right-24 z-20"
+          data-aos="zoom-in"
+        >
+          <div 
+          className="w-35 h-35 md:w-56 md:h-56 rounded-full overflow-hidden  shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+          // className="w-35 h-35 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl"
+          >
+            <img
+              src={profileImage} // apni image ka path
+              alt="Portfolio"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/50 z-10"></div>
